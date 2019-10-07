@@ -1,0 +1,56 @@
+<div class="row mt-3">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-8">
+              <img src="{{ data?.item?.picture }}" />
+            </div>
+            <div class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <h6>
+                    {{ data?.item?.condition }} -
+                    {{ data?.item?.sold_quantity }} vendidos
+                  </h6>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <h3>{{ data?.item?.title }}</h3>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <h1>
+                    <span>
+                      {{ data?.item.price.currency
+                      }}{{ data?.item.price.amount }}</span
+                    >
+                    <span *ngIf="data?.item.price.decimals != 0"
+                      >.{{ data?.item.price.decimals }}</span
+                    >
+                  </h1>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-12">
+                  <button class="btn btn-primary btn-full">
+                    Comprar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-8">
+              <h3>Descripcion del producto</h3>
+              <span class="desc-text">{{ data?.item?.description }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
